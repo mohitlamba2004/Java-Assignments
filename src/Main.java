@@ -1,5 +1,6 @@
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /* public class Main{
@@ -672,7 +673,7 @@ class swap{
 /*
 public class Main{
     public static void main(String[] args) {
-        int[] arr = [1,2,3,4,5,6,6];
+        int[] arr = {1,2,3,4,5,6,6};
         System.out.println(arr);
         array(arr);
         System.out.println(arr);
@@ -683,9 +684,117 @@ public class Main{
     }
 }
 
+
+
+class array{
+    public static void main(String[] args) {
+        int[] arr ={1,2,3,4,5,6};
+        change(arr);
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    static void change(int[] num){
+        num[2]= 9;
+    }
+}
+
+*/
+
+//Scoping :- where we can access our variables, " anything that is initialised outside a sub-block that can be used(update) inside sub- block but anything initialised inside sub-block can be used in it only not even used outside of sub-block.
+/*
+public class Main{
+    public static void main(String[] args) {
+        int a = 22;
+        int b = 7;
+        String name = "mohit";
+        {
+           // int a = 78; already initialised can be initialised again in a block
+            a = 23; // but it's vale can be changed
+            int c  = 78; // values inititaled in this block , will remains in this block
+           name = "rohit";
+        }
+        // System.out.println(c); // cannoy use outside the block
+        System.out.println(a);
+        System.out.println(name);
+    }
+}
+// scoping in for loop:-
+class loop {
+    public static void main(String[] args) {
+
+
+for(int i = 0; i< 5;i++)
+
+    {
+     int num = 99;
+    }
+        System.out.println(num); // can't because of explaination above
+}
+        }
+
+
  */
 
+// Shadowing :-
+/*
+public class Main{
+    static int x = 90;  //This will be shadowed(hidden)for line 745 and 746 because we inititaled x again for psvm scope.
 
+    public static void main(String[] args) {
+        System.out.println(x);
+        int x = 6;
+        System.out.println(x);
+        fun();
+    }
+    static void fun(){
+        System.out.println(x);
+    }
+}
 
+ */
 
+// Variable Arrguments :- when we need to use multiple argumentw(input) in a funtion
 
+/*
+public class Main{
+    public static void main(String[] args) {
+        fun(2,4,5,6,7,8,8);
+        fun2("hit","trd","rege");
+        fun();
+        multiple(3,6,"mohit","rohit");
+    }
+    static void fun(int ...a){
+        // it will keep argument in a array
+        System.out.println(Arrays.toString(a));
+    }
+    static void fun2(String ...a){
+        System.out.println(Arrays.toString(a));
+
+    }
+    static void multiple(int a, int b, String ...c){
+        System.out.println(c);
+    }
+}
+
+ */
+
+// Function overloading:- 2 more fynctions having same name but contains different parameter , so at time of calling it use that funtion which is has same parameter and argument
+
+/*
+
+public class Main{
+    public static void main(String[] args) {
+        fun(23);
+        fun("mohit");
+        fun("rohit");
+    }
+    static void fun(int a){
+        System.out.println(a);
+    }
+    static void fun(String a){
+        System.out.println(a);
+    }
+}
+
+ */
