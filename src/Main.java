@@ -798,3 +798,78 @@ public class Main{
 }
 
  */
+// Question :- prime numbers
+
+/*
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        boolean x = prime(n);
+        System.out.println(x);
+    }
+    static boolean prime(int num) {
+
+    if(num<=1){
+        return false;
+    }
+    int c = 2;
+    while(c*c>num){
+        if(num%c==0){
+            return true;
+        }
+        c++;
+    }
+    return c*c>num;
+
+    }
+
+}
+
+ */
+
+// question 2:- amgstrong number
+
+/*
+
+class amg{
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter the number for checking ");
+        int num = input.nextInt();
+        boolean x = check(num);
+        System.out.println(x);
+
+
+
+    }
+    static boolean check(int number){
+        int orr = number;
+        int sum = 0;
+       while(number >0){
+           int rem = number % 10;
+           int cube = rem * rem * rem;
+           sum = sum + cube;
+           number = number / 10;
+
+       }
+        System.out.println(sum);
+       if(orr ==sum){
+           return true;
+       }
+       else {
+           return false;
+       }
+    }
+}
+
+ */
+
+// Lecture 5 :- Arrays and ArrayList
+
+
+
+
+
+
