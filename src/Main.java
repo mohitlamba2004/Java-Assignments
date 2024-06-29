@@ -1,4 +1,5 @@
 
+import java.sql.Array;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -866,10 +867,121 @@ class amg{
 
  */
 
-// Lecture 5 :- Arrays and ArrayList
+// Lecture 5 :- Arrays and ArrayList :- needed to store a collection of a similar datatypes like string , int , boolean.
+/*
+public class Main{
+    public static void main(String[] args) {
+        int rollno = 23;
+        int rno2 = 2;
+        // array syntax :-
+        int[] rollno3 = new int[5]; //int[5] is size in array , new is used to create an object.
+        //or directly :-
+        int[] rollno4 = {2,3,4,5,6,7,8};
+
+        int[] ros; // declaration of array , nothing pointing to any object
+        ros = new int[5]; // initialised , now actual object is created in heap memory
+        ros[0] = 45;
+        ros[1] = 3;
+        ros[2] = 4;
 
 
+        String s = null; // null can be assigned to only non-primitives data types.
+
+        String[] ab = new String[5];
+        ab[0]= "mohit";
+        ab[1] = "rohit";
+
+        int[] arra = {1,2,3,4,5,6,7,8};
+        System.out.println(arra[2]);
 
 
+    }
+}
 
+ */
+
+//1. ARRRAY OBJECTS ARE IN HEAP MEMORY
+//2. HEAP OBEJCTS ARE NOT IN CONTINUOUS , LIKE IN C/C++ IT IS IN CONTINOUS BECOZ THEY HAVE POINTERS CONCEPT TO DECTECT THE ADDRESS OF THE OBEJCT.
+//3. DYNAMIC MEMORY ALLOCATION , DECLRATION OF VARIABLE HAPPENS AT COMPILE TIME AND INITIALISATION IN MEMORY HAPPENS AT RUN TIME.
+
+/*
+class arr{
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        int[] ar = new int[5];
+
+
+        for(int i = 0; i<ar.length ; i++){     //for loop in arrays
+              ar[i] = input.nextInt();
+            System.out.println(ar[i]);
+
+        }
+        System.out.println(Arrays.toString(ar));
+    }
+}
+
+ */
+
+// for each loop in arrays:-
+
+/*
+class fo{
+    public static void main(String[] args) {
+        int[] array = new int[6];
+        array[0] = 3;
+        for(int num : array){
+            System.out.print(num +" ");
+        }
+    }
+}
+
+ */
+
+// Input of String in array:-
+/*
+class arrOb{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String[] name = new String[5];
+        for(int i=0; i< name.length; i++){
+            name[i] = input.next();
+        }
+        System.out.println(Arrays.toString(name));
+
+        }
+    }
+
+
+ */
+
+// Arrays in function :-
+/*
+
+public class Main{
+    public static void main(String[] args) {
+        int[] no = {1,2,5,4,5,6};
+
+        name(no);
+        System.out.println(Arrays.toString(no));
+    }
+    static void name(int[] num){
+
+        num[0] = 99;
+
+
+    }
+}
+
+ */
+
+// 2D arrays :-
+
+class multiDim{
+    public static void main(String[] args) {
+
+    }
+}
 
