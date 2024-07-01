@@ -977,11 +977,72 @@ public class Main{
 
  */
 
-// 2D arrays :-
-
+// 2D arrays :- they are like matrix of array
+/*
 class multiDim{
     public static void main(String[] args) {
+           int[][] a = new int[3][];     //[][] are [rows][columns], columns are not mandatory.
+           //or
+           int[][] b = {
+                   {1,2,3},
+                   {4,5,6},   //Arrays of arrays
+                   {7,8,9}
+           };
+           int[][] c = {
+                   {1,2},
+                   {3,5,6,7},
+                   {8}
+           };
+        System.out.println(Arrays.toString(b[0]));
 
     }
 }
+
+ */
+
+// Input of 2Darray:-\
+
+/*
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[][] arr = new int[3][3];
+        for (int row = 0; row < arr.length; row++) {      //lenght of 2Darray will be no. of rows
+            for (int coln = 0; coln < arr[row].length; coln++) {
+                arr[row][coln] = input.nextInt();
+
+            }
+            System.out.println(Arrays.toString(arr[row]));
+        }
+
+
+    }
+}
+
+
+class fore{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[][] array = new int[3][3];
+      for( int row = 0 ; row < array.length ; row++){
+          for(int coln = 0 ; coln<array[row].length ; coln++){
+              array[row][coln] = input.nextInt();
+
+          }
+          System.out.println(Arrays.toString(array[row]));
+      }
+
+
+    }
+}
+
+ */
+
+// Arrays List :- when don;t know the size of array , take as many inputs as want in new int[?][]
+
+
+
+
+
 
