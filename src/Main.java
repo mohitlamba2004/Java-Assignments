@@ -1,6 +1,7 @@
 
 import java.sql.Array;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -1041,6 +1042,77 @@ class fore{
 
 // Arrays List :- when don;t know the size of array , take as many inputs as want in new int[?][]
 
+/*
+public class Main{
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list = new ArrayList<Integer>(10); // 10 is constructure
+        list.add(45);
+        list.add(34);
+        list.add(10);
+        list.add(45);
+        list.add(34);
+        list.add(10);
+        list.add(45);
+        list.add(34);
+        list.add(10);
+        list.add(45);
+        list.add(34);
+        list.add(10);
+        list.add(45);
+        list.add(34);
+        list.add(10);
+
+        System.out.println(list);
+
+        //Arrays Functions/Methods :-
+
+        list.add(34);  // adding in index
+
+        System.out.println(list.contains(334)); // check that this value list contains or not
+
+        list.set(0,99);  // set 0th index to 99.
+
+        System.out.println(list);
+
+        list.remove(2); //remove index no.2 from list arraylist
+
+        System.out.println(list);
+
+        System.out.println(list.get(4)); // accessing 4th index in list arraylist
+
+
+
+
+
+    }
+}
+
+ */
+
+
+// Input in Array List :-
+
+class List{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        ArrayList<Integer> List = new ArrayList<Integer>(5);
+
+        for(int i = 0; i< 5 ; i++){
+          List.add(input.nextInt());
+        }
+
+        System.out.println(List);
+
+        //OR Printing method
+
+        for(int i = 0; i< 5 ; i++){
+            System.out.print(List.get(i)); // get the values at i index and then print it
+        }
+    }
+}
+
+// Multi Dimentsional Arrays in ArraysList:-
 
 
 
