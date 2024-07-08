@@ -1204,17 +1204,26 @@ class swaps{
 
 // Q3. Reverse the array:-
 
+/*
 class rev{
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6};
+        System.out.println(Arrays.toString(arr));
+
+        revs(arr);
+
 
     }
     static void revs(int[] a){
 
         int[] b = new int[a.length];
-        for(int i =0; i< a.length; i++){
-            b[a.length - 1] = a[i];
+        for(int i =1; i<= a.length; i++){
+            b[a.length - i] = a[i-1];
+
 
         }
+        System.out.println(Arrays.toString(b));
     }
 }
+
+ */
