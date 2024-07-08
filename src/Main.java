@@ -925,6 +925,8 @@ class arr{
 
  */
 
+
+
 // for each loop in arrays:-
 
 /*
@@ -959,14 +961,15 @@ class arrOb{
  */
 
 // Arrays in function :-
-/*
 
+/*
 public class Main{
     public static void main(String[] args) {
         int[] no = {1,2,5,4,5,6};
 
         name(no);
         System.out.println(Arrays.toString(no));
+        no[4] = 56;
     }
     static void name(int[] num){
 
@@ -976,7 +979,9 @@ public class Main{
     }
 }
 
+
  */
+
 
 // 2D arrays :- they are like matrix of array
 /*
@@ -1092,7 +1097,7 @@ public class Main{
 
 
 // Input in Array List :-
-
+/*
 class List{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -1112,9 +1117,104 @@ class List{
     }
 }
 
+ */
+
 // Multi Dimentsional Arrays in ArraysList:-
+/*
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        ArrayList<ArrayList<Integer>> List = new ArrayList<>(10);
+        //Initialzing part:-
+        for(int i = 0; i<5 ; i++){
+            List.add(new ArrayList<>());
+
+        }
+        // Declearation :-
+        for(int i =0; i<5 ; i++){
+            for(int j =0; j<3 ; j++){
+                List.get(i).add(input.nextInt());
+            }
+        }
+        System.out.println(List);
+
+    }
+}
 
 
+ */
+
+// Q1 Swapping 2 numbers in array:-
+
+/*
+class swaps{
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5};
+        swap(arr , 2,3);
+        System.out.println(Arrays.toString(arr));
+
+    }
+    static void swap(int[] a, int index1, int index2){
+        int Temp = a[index1];
+        a[index1] = a[index2];
+        a[index2] = Temp;
+    }
+}
+
+ */
+
+// Q2:- maximum no. in array:-
+
+/*
+ class Maxi{
+     public static void main(String[] args) {
+         int[] arr = new int[7];
+         Max(arr);
+         System.out.println(Arrays.toString(arr));
+
+     }
+     static void Max(int[] a){
+         Scanner input = new Scanner(System.in);
+
+         for (int i = 0; i < 7; i++) {
+             a[i] = input.nextInt();
+         }
+         System.out.println(Arrays.toString(a));
+
+         int max = 0;
+         for(int i = 1; i<a.length; i++){
+            int nex = a[i];
+            int pri = a[i-1];
+            if(nex>pri){
+                max = nex;
+            }
+            else{
+                max = pri;
+            }
+
+        }
+         System.out.println(max);
+
+     }
+ }
 
 
+ */
 
+// Q3. Reverse the array:-
+
+class rev{
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6};
+
+    }
+    static void revs(int[] a){
+
+        int[] b = new int[a.length];
+        for(int i =0; i< a.length; i++){
+            b[a.length - 1] = a[i];
+
+        }
+    }
+}
