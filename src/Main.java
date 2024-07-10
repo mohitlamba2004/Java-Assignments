@@ -1223,7 +1223,21 @@ class rev{
 
         }
         System.out.println(Arrays.toString(b));
-    }
+
 }
 
  */
+
+//Lecture 6 :-  Linear Searching Method (notes in notebook)
+
+public class Main{
+    public static void main(String[] args) {
+        int a = 10;
+        int b= 30;
+        int c = a+ b;
+        System.out.println(c);
+    }
+}
+
+
+
