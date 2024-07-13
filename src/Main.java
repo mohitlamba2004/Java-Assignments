@@ -1230,6 +1230,8 @@ class rev{
 
 //Lecture 6 :-  Linear Searching Method (notes in notebook)
 
+/*
+
 public class Main{
     public static void main(String[] args) {
           int[] array = {1,2,3,4,5,6,7,8,8};
@@ -1254,8 +1256,39 @@ public class Main{
     }
 }
 
+ */
+
+
+// search in rage of array:-
+
+/*
+class rsng{
+    public static void main(String[] args) {
+        int[] arrr = {1,2,3,4,5,6,7};
+        int k = 5;
+        int ans = arr(arrr , k , 2 , 4);
+        System.out.println(ans);
+
+    }
+    static int arr(int[] a , int target ,int start , int end){
+
+        if(a.length==0){
+            return-1;
+        }
+        for (int i = start; i<= end; i++){
+            if(a[i] == target){
+                return target;
+            }
+        }
+        return -1;
+    }
+}
+
+ */
+
 // Search in Strings :-
 
+/*
 class str{
     public static void main(String[] args) {
 
@@ -1312,5 +1345,72 @@ class stri{
 }
 
 
+ */
 
+// find minimum number in array:-
 
+public class Main{
+    public static void main(String[] args) {
+        int[] ar = {1,2,3,4,5,6,7,-5};
+        System.out.println(minn(ar));
+        System.out.println("program over");
+    }
+    static int minn(int[] a){
+        int minu = a[0];
+        for (int i = 0; i < a.length; i++) {
+            if(a[i] < minu){
+                minu = a[i];
+            }
+        }
+        return minu;
+    }
+}
+
+// Search in 2D array:-
+
+class d2{
+    public static void main(String[] args) {
+        int[][] arr = {
+            {1,2,3}, {4,5,6} , {2,6} , {5,7,9}
+        };
+        int target = 3;
+
+        System.out.println(fun(arr , target));
+
+    }
+    static boolean fun(int[][] a , int t){
+        for (int row = 0; row< a.length ; row++){
+            for(int colm = 0 ; colm<a[row].length ; colm++){
+                if(a[row][colm]== t){
+                    return true;
+                }
+                if(a.length == 0){
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+}
+
+// return the row of target number in @D array:-
+
+class d22{
+    public static void main(String[] args) {
+        int[][] arr = {
+                {1,2,3}, {4,5,6} , {2,6} , {5,7,9}
+        };
+        int tar = 4;
+        System.out.println(Arrays.toString(fun(arr , tar)));
+    }
+    static int[] fun(int[][] a , int target){
+        for(int row = 0; row<a.length; row++){
+            for(int coln = 0; coln<a[row].length ; coln++){
+                if(a[row][coln] == target){
+                    return a[row];
+                }
+            }
+        }
+        return new int[]{-1,-1};              // returning a 2d array
+    }
+}
