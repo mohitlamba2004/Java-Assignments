@@ -1349,6 +1349,8 @@ class stri{
 
 // find minimum number in array:-
 
+/*
+
 public class Main{
     public static void main(String[] args) {
         int[] ar = {1,2,3,4,5,6,7,-5};
@@ -1366,8 +1368,11 @@ public class Main{
     }
 }
 
+ */
+
 // Search in 2D array:-
 
+/*
 class d2{
     public static void main(String[] args) {
         int[][] arr = {
@@ -1393,7 +1398,7 @@ class d2{
     }
 }
 
-// return the row of target number in @D array:-
+// return the row of target number in 2D array:-
 
 class d22{
     public static void main(String[] args) {
@@ -1407,10 +1412,61 @@ class d22{
         for(int row = 0; row<a.length; row++){
             for(int coln = 0; coln<a[row].length ; coln++){
                 if(a[row][coln] == target){
-                    return a[row];
+                    return a[row];      // if want to print cordinates of that target :- return new int[]{row,coln};
                 }
             }
         }
         return new int[]{-1,-1};              // returning a 2d array
     }
 }
+
+ */
+/*
+class d222{
+    public static void main(String[] args) {
+        int[][] arr = {
+                {1,2,3},{-1,0,0}, {4,5,6} , {2,6} , {5,7,9}
+        };
+        fun(arr);
+
+    }
+    static void fun(int[][] a){
+        int min = a[0][0];
+        for(int row = 0; row<a.length; row++){
+            for(int coln = 0; coln<a[row].length ; coln++){
+
+                if(a[row][coln] < min ){
+                    min = a[row][coln];
+                }
+            }
+        }
+        System.out.println(min);
+    }
+}
+
+ */
+
+// return how many even digits from a number in an array of numbers:-   3 hr lag gaye mkc
+
+public class Main{
+    public static void main(String[] args) {
+        int[] arr = {23,121,23,24,567,43,2,67,890,87,45};
+        result(arr);
+    }
+    static void result(int[] a){
+        int count =0;
+        int Tnum = 0;
+        for (int num : a) {
+            while(num>0){
+                count++;
+                num = num/10;
+            }
+            if(count % 2==0){
+                Tnum = Tnum+1;
+            }
+            count =0;
+        }
+        System.out.println(Tnum);
+    }
+}
+
