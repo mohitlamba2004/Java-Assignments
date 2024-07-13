@@ -1232,12 +1232,85 @@ class rev{
 
 public class Main{
     public static void main(String[] args) {
-        int a = 10;
-        int b= 30;
-        int c = a+ b;
-        System.out.println(c);
+          int[] array = {1,2,3,4,5,6,7,8,8};
+          fun(array);
+
+    }
+    static int fun(int[] arr){
+        Scanner inpu = new Scanner(System.in);
+        System.out.println("Enter the Target :- ");
+        int target = inpu.nextInt();
+        if(arr.length == 0){
+            System.out.println("Enter valid array/List");
+            return -1;
+        }
+        for (int index = 0; index < arr.length; index++) {
+            if(arr[index] == target){
+                System.out.println(index+" index is the target" );
+                return index;
+            }
+        }
+        return-1;
     }
 }
+
+// Search in Strings :-
+
+class str{
+    public static void main(String[] args) {
+
+        System.out.println(string("dsbvhuvbbvev"));
+
+        
+    }
+    static boolean string(String st) {
+        System.out.println("Enter the chr u want to search");
+        Scanner input = new Scanner(System.in);
+        char ab = input.next().charAt(0);
+
+        if (st.length() == 0) {
+            return false;
+        }
+        for (char ch : st.toCharArray()) {        //change string in array
+            if (ch == ab) {
+                return true;
+            }
+
+        }
+
+     return false;
+    }
+
+}
+
+// by for loop:-
+
+class stri{
+    public static void main(String[] args) {
+        System.out.println("Enter the String");
+        Scanner input = new Scanner(System.in);
+        String name = input.next();
+        System.out.println("Enter the char u want to search");
+        char k = input.next().charAt(0);
+        System.out.println(fun(name , k));
+
+    }
+
+    static boolean fun(String n , char k){
+
+        if(n.length()==0){
+            return false;
+        }
+        for(int i =0; i<n.length(); i++){
+            if(n.charAt(i)==k){
+                return true;
+            }
+        }
+        return false;
+    }
+
+}
+
 
 
 
