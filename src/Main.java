@@ -1043,6 +1043,8 @@ class fore{
     }
 }
 
+
+
  */
 
 // Arrays List :- when don;t know the size of array , take as many inputs as want in new int[?][]
@@ -1448,25 +1450,76 @@ class d222{
 
 // return how many even digits from a number in an array of numbers:-   3 hr lag gaye mkc
 
+/*
 public class Main{
     public static void main(String[] args) {
-        int[] arr = {23,121,23,24,567,43,2,67,890,87,45};
-        result(arr);
+        int[] num = {12,345,2,6,7896};
+        System.out.println(result(num));
     }
-    static void result(int[] a){
+    static int result(int[] num){
         int count =0;
         int Tnum = 0;
-        for (int num : a) {
-            while(num>0){
+        for (int nums : num) {
+            while(nums>0){
                 count++;
-                num = num/10;
+                nums = nums/10;
             }
             if(count % 2==0){
                 Tnum = Tnum+1;
             }
             count =0;
         }
-        System.out.println(Tnum);
+
+        return Tnum;
     }
 }
 
+
+ */
+
+
+// Max Wealth Question :-
+/*
+
+class ain{
+    public static void main(String[] args) {
+        System.out.println("Arrays :-");
+        int[][] wel = new int[3][3];
+        maxi(wel);
+
+
+    }
+    static void maxi(int[][] arr){
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the Arrays : - ");
+        for (int row =0; row<arr.length ; row++){
+            for (int coln =0; coln<arr[row].length ; coln++){
+                arr[row][coln] = input.nextInt();
+
+            }
+        }
+        int sum = 0;
+        int[] ans = new int[3];
+        for (int i =0; i< arr.length; i++){
+                int[] person = arr[i];
+                for (int num : person){
+                    sum = sum + num;
+                    ans[i] = sum;
+                }
+                sum=0;
+            }
+        System.out.println(Arrays.toString(ans));
+        int max = ans[0];
+        for (int j = 0; j < ans.length; j++) {
+            if(ans[j] > max ){
+                max = ans[j];
+            }
+        }
+        System.out.println("the wealthiest is "+ max);
+    }
+}
+
+ */
+
+//
