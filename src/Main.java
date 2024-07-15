@@ -1522,4 +1522,56 @@ class ain{
 
  */
 
-//
+// Kunal's solutiin
+
+/*
+class kunak{
+    public static void main(String[] args) {
+
+    }
+    static int maxwe(int[][] accounts){
+        int max = Integer.MIN_VALUE;
+        for (int[] ints : accounts) {
+            int sum = 0;
+            for (int anInt : ints) {
+                sum = sum + anInt;
+
+            }
+            if (sum > max) {
+                max = sum;
+            }
+        }
+        return max;
+    }
+}
+
+ */
+
+//Lecture 7 :- Binary Serch Comapriosn - notes in notebook
+
+
+public class Main{
+    public static void main(String[] args) {
+          int[] array = { -13,-12,-11,-10,-4,0,5,6,7,8,9,10,11,23};
+          int tar = -13;
+        System.out.println(search(array , tar));
+    }
+
+    static int search(int[] arr , int target){
+        int start = 0 ;
+        int end = arr.length -1;
+        while(start <= end){
+            //int middle = (start + end)/2;     might start + end exceeds the range of storage of int. so use this formula
+            int middle = start + (end - start)/2;
+            if(target > arr[middle]){
+                start =  middle+1;
+            } else if (target < arr[middle]) {
+                end = middle -1;
+            }
+            else {
+                return middle;
+            }
+        }
+        return -1;
+    }
+}
