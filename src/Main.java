@@ -1547,7 +1547,7 @@ class kunak{
 
  */
 
-//Lecture 7 :- Binary Serch Comapriosn - notes in notebook
+//Lecture 7 :- Binary Serch Comapriosn in acceding order sorted array - notes in notebook
 
 
 public class Main{
@@ -1572,6 +1572,44 @@ public class Main{
                 return middle;
             }
         }
+        return -1;
+    }
+}
+
+// Order Agnostic Binary Search :- when u don't know that the array is sorted in accending or desending order:-
+
+class Algo{
+    public static void main(String[] args) {
+        int[] array = { -13,-12,-11,-10,-4,0,5,6,7,8,9,10,11,23};  // This is in accending order.
+        int tar = -11;
+        System.out.println(fun(array , tar));
+    }
+    static int fun(int[] arr , int target){
+        int start = 0;
+        int end = arr.length-1;
+        boolean assendingOrder = arr[start] < arr[end];
+
+        while(start <= end) {
+            int midle = start + (end - start) / 2;
+            if (target == arr[midle]) {
+                return midle;
+            }
+            if (assendingOrder == true) {
+                if (target > arr[midle]) {
+                    start = midle + 1;
+                } else if (target < arr[midle]) {
+                    end = midle - 1;
+                }
+            }
+            else {
+                if (target < arr[midle]) {
+                    start = midle + 1;
+                } else if (target > arr[midle]) {
+                    end = midle - 1;
+                }
+            }
+        }
+
         return -1;
     }
 }
