@@ -1549,6 +1549,7 @@ class kunak{
 
 //Lecture 7 :- Binary Serch Comapriosn in acceding order sorted array - notes in notebook
 
+/*
 
 public class Main{
     public static void main(String[] args) {
@@ -1613,3 +1614,5 @@ class Algo{
         return -1;
     }
 }
+
+ */
