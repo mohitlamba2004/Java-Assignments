@@ -1261,7 +1261,7 @@ public class Main{
  */
 
 
-// search in rage of array:-
+// search in range of array:-
 
 /*
 class rsng{
@@ -1279,14 +1279,16 @@ class rsng{
         }
         for (int i = start; i<= end; i++){
             if(a[i] == target){
-                return target;
+                return i;
             }
         }
         return -1;
     }
 }
 
+
  */
+
 
 // Search in Strings :-
 
@@ -1453,7 +1455,7 @@ class d222{
 /*
 public class Main{
     public static void main(String[] args) {
-        int[] num = {12,345,2,6,7896};
+        int[] num = {12,345,2,6,7896,3543};
         System.out.println(result(num));
     }
     static int result(int[] num){
@@ -1476,7 +1478,6 @@ public class Main{
 
 
  */
-
 
 // Max Wealth Question :-
 /*
@@ -1517,6 +1518,36 @@ class ain{
             }
         }
         System.out.println("the wealthiest is "+ max);
+    }
+}
+
+ */
+// a new Way :-
+/*
+class wel{
+    public static void main(String[] args) {
+        int[][] arr = {{1,2,3,7} , {3,2,1,89,9}};
+        fun(arr);
+
+    }
+    static void fun(int[][] a){
+        int sum = 0;
+        int[] ans = new int[a.length];
+        for(int person = 0; person<a.length; person++){
+            for(int account = 0; account<a[person].length; account++){
+                sum = sum + a[person][account];
+            }
+            ans[person] = sum;
+            sum = 0;
+        }
+        System.out.println(Arrays.toString(ans));
+        int max = ans[0];
+        for(int i =0; i<ans.length ; i++){
+            if(ans[i] > max){
+                max = ans[i];
+            }
+        }
+        System.out.println("wealthest man is "+max+" person");
     }
 }
 
