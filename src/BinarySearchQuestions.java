@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class BinarySearchQuestions {
     public static void main(String[] args) {
         // Question on Binary Search.
@@ -93,32 +95,115 @@ class Q3{  //
 
 //Q3 :- Return Smallest letter greater than target.
 
+/*
 class small{
     public static void main(String[] args) {
         char[] arr = {'c','f','j','l'};
         char target = 'f';
         System.out.println(fun(arr,target));
     }
-    static char fun(char[] a, char tar){
+    static char fun(char[] letters, char target){
         int start = 0;
-        int end = a.length -1;
+        int end = letters.length -1;
         while(start<= end){
             int mid = start + (end - start)/2;
-            if(tar == a[mid]){
-                return a[mid+1];
+            if(target == letters[mid]){
+                return letters[mid+1];
             }
-            if(tar < a[mid]){
+            if(target < letters[mid]){
                 end = mid -1;
             }
-            if (tar > a[mid]) {
+            if (target > letters[mid]) {
                 start = mid +1;
             }
         }
-        if(start == a.length){
-            return a[0];
+        if(start == letters.length){
+            return letters[0];
         }
         else{
-            return a[start];
+            return letters[start];
         }
     }
 }
+
+ */
+// Q4 :- Find first and last position of an sorted array.
+
+/*
+// My solution :- binary k andr linear search
+class u4{
+    public static void main(String[] args) {
+        int[]a = {5,7,7,7,7,8,8,10};
+        int tar = 7;
+        System.out.println(Arrays.toString(fun(a,tar)));
+    }
+    static int[] fun(int[] a , int tar){
+        int[] ans = {-1,-1};
+        int ans1=0;
+        int ans2=0;
+        int start = 0;
+        int end = a.length-1;
+        while(start<=end){
+            int mid = start + (end - start)/2;
+            if(tar == a[mid]){
+                for(int start1 = 0; start1<=mid+1; start1++){
+                    if(tar == a[start1]){
+                        ans1 = start1;
+                        break;
+                    }
+                }
+                for(int end1 = a.length-1; end1>=mid+1; end1--){
+                    if(tar == a[end1]){
+                        ans2 = end1;
+                        break;
+                    }
+                }
+                return new int[]{ans1,ans2};
+
+            }
+            if(tar > a[mid]){
+                start = mid +1;
+            }
+            else{
+                end = mid -1;
+            }
+        }
+        return ans;
+    }
+}
+
+ */
+// Kunal Solution :-
+class Q4{
+    public static void main(String[] args) {
+
+    }
+    static int fun(int[] a , int tar){
+        int start = 0;
+        int end = a.length-1;
+        while(start<=end){
+            int mid = start + (end - start)/2;
+            if(tar == a[mid]){
+                int start1 = 0;
+                int end1 = mid;
+                while(start1<=end1){
+                    int mid1 = start1 + (end1 - start1)/2;
+                    if(tar > a[mid1]){
+                        start1 = mid1 +1;
+                    }
+                    else{
+                        end1 = mid1 -1;
+                    }
+                }
+            }
+            if(tar > a[mid]){
+                start = mid +1;
+            }
+            else{
+                end = mid -1;
+            }
+        }
+        return -1;
+    }
+}
+
